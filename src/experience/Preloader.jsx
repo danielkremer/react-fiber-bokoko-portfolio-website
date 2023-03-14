@@ -286,16 +286,17 @@ const Preloader = ({ roomRef, enableControls, orthographicCameraRef }) => {
         });
     });
   }
+
+  function removeEventListeners() {
+    window.removeEventListener('wheel', onScroll);
+    window.removeEventListener('touchstart', onTouch);
+    window.removeEventListener('touchmove', onTouchMove);
+  }
   function onScroll(e) {
     if (e.deltaY > 0) {
       removeEventListeners();
       playSecondIntro();
     }
-  }
-  function removeEventListeners() {
-    window.removeEventListener('wheel', onScroll);
-    window.removeEventListener('touchstart', onTouch);
-    window.removeEventListener('touchmove', onTouchMove);
   }
   function onTouch(e) {
     setInitialY(e.touches[0].clientY);
@@ -303,6 +304,9 @@ const Preloader = ({ roomRef, enableControls, orthographicCameraRef }) => {
   function onTouchMove(e) {
     let currentY = e.touches[0].clientY;
     let difference = initialY - currentY;
+    console.log(initialY, 'initialY');
+    console.log(currentY, 'currentY');
+    console.log(difference, 'difference');
     if (difference > 0) {
       removeEventListeners();
       playSecondIntro();

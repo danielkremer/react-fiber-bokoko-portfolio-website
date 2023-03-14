@@ -11,13 +11,12 @@ const App = () => {
       <div className='experience'>
         <Canvas
           gl={{ antialias: true }}
-          shadows
           onCreated={({ gl }) => {
             gl.physicallyCorrectLights = THREE.sRGBEncoding;
             gl.toneMapping = THREE.CineonToneMapping;
             gl.toneMappingExposure = 1.75;
-            // gl.shadowMap.enabled = true;
-            // gl.shadowMap.type = THREE.PCFShadowMap;
+            gl.shadowMap.enabled = true;
+            gl.shadowMap.type = THREE.PCFShadowMap;
             gl.setSize(sizes.width, sizes.height);
             gl.setPixelRatio(window.devicePixelRatio / 2);
           }}
