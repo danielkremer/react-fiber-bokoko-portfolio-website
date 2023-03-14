@@ -7,9 +7,9 @@ import useSizes from './utils/useSizes.jsx';
 
 const Preloader = ({ roomRef, enableControls, orthographicCameraRef }) => {
   const sizes = useSizes();
+  let initialY = null;
   const [scaleFlag, setScaleFlag] = useState(false);
   const [moveFlag, setMoveFlag] = useState(false);
-  const [initialY, setInitialY] = useState(null);
 
   useFrame(() => {
     if (moveFlag) {
@@ -298,20 +298,19 @@ const Preloader = ({ roomRef, enableControls, orthographicCameraRef }) => {
       playSecondIntro();
     }
   }
+  let t = null;
   function onTouch(e) {
-    setInitialY(e.touches[0].clientY);
+    initialY = e.touches[0].clientY;
   }
   function onTouchMove(e) {
     let currentY = e.touches[0].clientY;
     let difference = initialY - currentY;
-    console.log(initialY, 'initialY');
-    console.log(currentY, 'currentY');
-    console.log(difference, 'difference');
+
     if (difference > 0) {
       removeEventListeners();
       playSecondIntro();
     }
-    setInitialY(null);
+    initialY = null;
   }
   async function playIntro() {
     setScaleFlag(true);
