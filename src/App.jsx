@@ -19,7 +19,7 @@ const App = () => {
             // gl.shadowMap.enabled = true;
             // gl.shadowMap.type = THREE.PCFShadowMap;
             gl.setSize(sizes.width, sizes.height);
-            // gl.setPixelRatio(sizes.pixelRatio);
+            gl.setPixelRatio(window.devicePixelRatio / 2);
           }}
         >
           <Experience />
