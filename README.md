@@ -1,6 +1,6 @@
 # My Recreation of Bokokos award-winning portfolio website with React Fiber
 
-In the process of learning three.js, blender and specifically react fiber, I recreated Bokoko's award-winning website to showcase the progress.
+In the process of learning three.js, blender and specifically react fiber, I recreated Bokokos award-winning website to showcase the progress.
 
 Have a look around!
 
