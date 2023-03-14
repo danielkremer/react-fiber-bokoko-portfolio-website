@@ -11,6 +11,7 @@ const App = () => {
       <div className='experience'>
         <Canvas
           gl={{ antialias: true }}
+          shadows
           onCreated={({ gl }) => {
             gl.physicallyCorrectLights = THREE.sRGBEncoding;
             gl.toneMapping = THREE.CineonToneMapping;
@@ -18,7 +19,7 @@ const App = () => {
             gl.shadowMap.enabled = true;
             gl.shadowMap.type = THREE.PCFShadowMap;
             gl.setSize(sizes.width, sizes.height);
-            gl.setPixelRatio(sizes.pixelRatio);
+            // gl.setPixelRatio(sizes.pixelRatio);
           }}
         >
           <Experience />
