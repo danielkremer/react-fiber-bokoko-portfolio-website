@@ -14,7 +14,7 @@ const Camera = ({ orthographicCameraRef }) => {
 
   useEffect(() => {
     resize();
-  }, [sizes.width]);
+  }, [sizes.width, sizes.height]);
 
   return (
     <>
