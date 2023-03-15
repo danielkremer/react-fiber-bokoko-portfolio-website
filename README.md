@@ -4,7 +4,7 @@ In the process of learning three.js, blender and specifically react fiber, I rec
 
 Have a look around!
 
-[Live Demo](https://danielkremer.com)
+[Live Demo](https://react-fiber-bokoko-portfolio-website.vercel.app/)
 
 ### Preview
 

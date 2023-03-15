@@ -57,7 +57,7 @@ const Preloader = ({ roomRef, enableControls, orthographicCameraRef }) => {
             duration: 0.7,
           })
           .to(roomRef.current.position, {
-            x: -1,
+            x: -1.25,
             ease: 'power1.out',
             duration: 0.7,
           });
@@ -298,7 +298,6 @@ const Preloader = ({ roomRef, enableControls, orthographicCameraRef }) => {
       playSecondIntro();
     }
   }
-  let t = null;
   function onTouch(e) {
     initialY = e.touches[0].clientY;
   }
@@ -328,7 +327,7 @@ const Preloader = ({ roomRef, enableControls, orthographicCameraRef }) => {
   }
   function move() {
     if (sizes.device === 'desktop') {
-      roomRef.current.position.set(-1, 0, 0);
+      roomRef.current.position.set(-1.25, 0, 0);
     } else {
       roomRef.current.position.set(0, 0, -1);
     }

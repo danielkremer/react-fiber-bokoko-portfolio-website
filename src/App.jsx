@@ -60,8 +60,9 @@ const App = () => {
         <div className='page-wrapper' asscroll={'true'}>
           <section className='hero'>
             <div className='hero-wrapper'>
-              <div className='intro-text'>Welcome to my website!</div>
+              <div className='intro-text'>Welcome to this portfolio project!</div>
               <div className='arrow-svg-wrapper'>
+                <p style={{ marginBottom: 10 }}>Scroll down</p>
                 <svg xmlns='http://www.w3.org/2000/svg' height='24' width='24'>
                   <path
                     fill='currentColor'
@@ -76,8 +77,8 @@ const App = () => {
               </div>
 
               <div className='hero-second'>
-                <p className='hero-second-subheading first-sub'>Daniel Kremer</p>
-                <p className='hero-second-subheading second-sub'>Portfolio</p>
+                <p className='hero-second-subheading first-sub'>Fullstack</p>
+                <p className='hero-second-subheading second-sub'>Developer</p>
               </div>
             </div>
           </section>
@@ -91,7 +92,7 @@ const App = () => {
 
             <div className='section-intro-wrapper'>
               <h1 className='section-title'>
-                <span className='section-title-text'>About Me</span>
+                <span className='section-title-text'>About</span>
                 <div className='section-title-decoration firstStyle'></div>
                 <div className='section-title-decoration secondStyle'></div>
                 <div className='section-title-decoration thirdStyle'></div>
@@ -101,17 +102,16 @@ const App = () => {
 
             <div className='section-detail-wrapper'>
               <p className='section-text'>
-                Hi guys 👋! I'm Daniel, a software engineer from Germany. I build mobile and web
-                apps. I also like like to take photos, create videos and make cool visual effects.
+                Hey everyone👋! I'm Daniel, a software engineer from Germany. I specialize in
+                building mobile and web apps.
               </p>
               <p className='section-text'>
-                {' '}
-                I love dancing and participating in different sport activities!✌️
+                To further my learning of Three.js, Blender, and React Fiber, I decided to recreate
+                Bokoko's award-winning website to showcase my progress.
               </p>
               <p className='section-text'>
-                {' '}
-                In the process of learning three.js and blender I recreated Bokoko's award-winning
-                website to showcase the progress.
+                In the following sections, you'll find a brief summary of the project workflow and
+                some other projects you can check out.
               </p>
               <p className='section-text'> I hope it leaves an impression!</p>
             </div>
@@ -126,12 +126,49 @@ const App = () => {
 
             <div className='section-intro-wrapper blue-text blue-border'>
               <h1 className='section-title blue-text blue-border'>
-                <span className='section-title-text blue-text'>Projects</span>
+                <span className='section-title-text blue-text'>Project Workflow</span>
                 <div className='section-title-decoration firstStyle blue-border'></div>
                 <div className='section-title-decoration secondStyle blue-border'></div>
                 <div className='section-title-decoration thirdStyle blue-background blue-border'></div>
               </h1>
               <span className='section-number blue-text'>02</span>
+            </div>
+
+            <div className='section-detail-wrapper'>
+              <h3 className='section-heading'>Workflow description</h3>
+              <p className='section-text'>
+                To get the project off the ground, the 3D model had to be created in Blender first.
+                Each shape was created, colored, and then exported as a whole .glb file.
+              </p>
+              <p className='section-text'>
+                Moving on, a React project was created, and the model was imported using the
+                react-fiber package. The application was then split into different, logically
+                meaningful components. This way, changes can be easily implemented. For animations,
+                gsap was used.
+              </p>
+              <p className='section-text'>
+                Moreover, the spatial positions, sizes, scaling, the scroll behavior, and lights had
+                to be set individually, based on the 3D model (in this case, the room). Once this
+                was done, the project was ready for release.
+              </p>
+            </div>
+          </section>
+
+          <div className='third-move section-margin'></div>
+
+          <section className='third-section section left'>
+            <div className='progress-wrapper progress-bar-wrapper-left'>
+              <div className='progress-bar green-background'></div>
+            </div>
+
+            <div className='section-intro-wrapper green-text green-border'>
+              <h1 className='section-title green-text green-border'>
+                <span className='section-title-text green-text'>Other Projects</span>
+                <div className='section-title-decoration firstStyle green-border'></div>
+                <div className='section-title-decoration secondStyle green-border'></div>
+                <div className='section-title-decoration thirdStyle green-background green-border'></div>
+              </h1>
+              <span className='section-number green-text'>03</span>
             </div>
 
             <div className='section-detail-wrapper'>
@@ -173,7 +210,7 @@ const App = () => {
                   Show project
                 </a>
               </p>
-              <div className='divider blue-text blue-border'></div>
+              <div className='divider green-text green-border'></div>
               <h3 className='section-heading'>Github</h3>
               <p className='section-text'>Check out my github page to see more projects.</p>
               <p className='section-text link'>
@@ -181,38 +218,11 @@ const App = () => {
                   Go to github
                 </a>
               </p>
-            </div>
-          </section>
-
-          <div className='third-move section-margin'></div>
-
-          <section className='third-section section left'>
-            <div className='progress-wrapper progress-bar-wrapper-left'>
-              <div className='progress-bar green-background'></div>
-            </div>
-
-            <div className='section-intro-wrapper green-text green-border'>
-              <h1 className='section-title green-text green-border'>
-                <span className='section-title-text green-text'>Contact Me</span>
-                <div className='section-title-decoration firstStyle green-border'></div>
-                <div className='section-title-decoration secondStyle green-border'></div>
-                <div className='section-title-decoration thirdStyle green-background green-border'></div>
-              </h1>
-              <span className='section-number green-text'>03</span>
-            </div>
-
-            <div className='section-detail-wrapper'>
-              <h3 className='section-heading'>Email</h3>
-              <p className='section-text'>
-                Get in touch with me by just sending me an email to the following email address:{' '}
-              </p>
+              <div className='divider green-text green-border'></div>
+              <h3 className='section-heading'>Get in touch:</h3>
               <p className='section-text link'>
                 <a href='mailto:daniel@danielkremer.com'>daniel@danielkremer.com</a>
               </p>
-              {/* <h3 className="section-heading">Instagram</h3>
-            <p className="section-text"></p>
-            <h3 className="section-heading">LinkedIn</h3>
-            <p className="section-text"></p>  */}
             </div>
           </section>
         </div>

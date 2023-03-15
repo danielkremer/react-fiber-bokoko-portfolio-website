@@ -87,7 +87,6 @@ const Controls = ({
         pointLight.decay = theme === 'light' ? 0 : 1;
         orthographicCameraRef.current.position.set(0, 6.5, 10);
         roomRef.current.position.set(0, 0, 0);
-
         const firstMoveTimeline = gsap.timeline({
           scrollTrigger: {
             trigger: '.first-move',
