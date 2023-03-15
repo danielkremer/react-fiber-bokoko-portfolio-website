@@ -74,16 +74,24 @@ const Experience = () => {
   function enableControls() {
     setAreControlsEnabled(true);
   }
-
+  // const { enabled, ...config } = useControls({
+  //   enabled: true,
+  //   size: { value: 25, min: 0, max: 100 },
+  //   focus: { value: 0, min: 0, max: 2 },
+  //   samples: { value: 10, min: 1, max: 20, step: 1 },
+  // });
   return (
     <>
+      {/* {enabled && <SoftShadows {...config} />} */}
       <Camera orthographicCameraRef={orthographicCameraRef} />
       <Environment pointLight={pointLight} />
+      {/* <Stage shadows='accumulative'> */}
       <Floor
         circleFirstRef={circleFirstRef}
         circleSecondRef={circleSecondRef}
         circleThirdRef={circleThirdRef}
       />
+      {/* </Stage> */}
       <Room roomRef={roomRef} roomScene={roomScene} screen={screen} />
       <Preloader
         roomRef={roomRef}

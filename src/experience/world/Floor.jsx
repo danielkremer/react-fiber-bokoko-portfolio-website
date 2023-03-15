@@ -1,20 +1,13 @@
-import { useThree } from '@react-three/fiber';
 import React from 'react';
 import { BackSide } from 'three';
 import useTheme from '../utils/useTheme';
 
 const Floor = ({ circleFirstRef, circleSecondRef, circleThirdRef }) => {
-  const viewport = useThree((state) => state.viewport);
   const theme = useTheme();
   return (
     <>
-      <mesh
-        scale={[viewport.width, viewport.height, 1]}
-        position={[0, -0.3, 0]}
-        rotation={[Math.PI / 2, 0, 0]}
-        receiveShadow
-      >
-        <planeGeometry args={[100, 100]} />
+      <mesh position={[0, -0.3, 0]} rotation={[Math.PI / 2, 0, 0]} receiveShadow>
+        <planeGeometry args={[2408, 2408]} />
         <meshStandardMaterial color={theme === 'light' ? 0xeae5d3 : 0xeae8e0} side={BackSide} />
       </mesh>
       <mesh

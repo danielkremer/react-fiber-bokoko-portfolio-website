@@ -59,7 +59,7 @@ const Environment = ({ pointLight }) => {
         intensity={1}
         color={'#ffffff'}
         shadow-camera-far={20}
-        shadow-mapSize={[2048, 2048]}
+        shadow-mapSize={[4000, 4000]}
         shadow-normalBias={0.05}
       />
       <ambientLight ref={ambientLightRef} args={['#ffffff', 0.4]} />
