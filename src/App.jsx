@@ -92,7 +92,7 @@ const App = () => {
 
             <div className='section-intro-wrapper'>
               <h1 className='section-title'>
-                <span className='section-title-text'>About</span>
+                <span className='section-title-text'>First introduction</span>
                 <div className='section-title-decoration firstStyle'></div>
                 <div className='section-title-decoration secondStyle'></div>
                 <div className='section-title-decoration thirdStyle'></div>

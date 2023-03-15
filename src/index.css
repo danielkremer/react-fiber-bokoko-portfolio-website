@@ -371,15 +371,15 @@ a {
 }
 
 .firstStyle {
-  top: 0px;
+  top: 10px;
 }
 
 .secondStyle {
-  top: 80px;
+  top: 100px;
 }
 
 .thirdStyle {
-  top: 80px;
+  top: 100px;
   transform: skewY(25deg);
   background-color: var(--color-pink);
 }
