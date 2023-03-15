@@ -94,7 +94,6 @@ const Controls = ({
             start: 'top top',
             end: 'bottom bottom',
             scrub: 0.6,
-            // markers: true,
             invalidateOnRefresh: true,
           },
         });

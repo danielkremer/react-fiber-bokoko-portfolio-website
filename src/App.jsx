@@ -17,15 +17,11 @@ const App = () => {
             gl.physicallyCorrectLights = THREE.sRGBEncoding;
             gl.toneMapping = THREE.CineonToneMapping;
             gl.toneMappingExposure = 1.75;
-            // gl.shadowMap.enabled = true;
-            // gl.shadowMap.type = THREE.PCFSoftShadowMap;
             gl.setSize(sizes.width, sizes.height);
             gl.setPixelRatio(window.devicePixelRatio / 2);
           }}
         >
-          {/* <Stage preset='rembrandt' intensity={1} environment='city'> */}
           <Experience />
-          {/* </Stage> */}
         </Canvas>
       </div>
 

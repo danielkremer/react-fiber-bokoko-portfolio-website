@@ -58,8 +58,8 @@ const Experience = () => {
       }
 
       if (child.name === 'Mini_Floor') {
-        child.position.x = 0.225066; //-0.225066 m
-        child.position.z = -3.21285; // -3.21285 m
+        child.position.x = 0.225066;
+        child.position.z = -3.21285;
       }
 
       child.scale.set(0, 0, 0);
@@ -74,24 +74,16 @@ const Experience = () => {
   function enableControls() {
     setAreControlsEnabled(true);
   }
-  // const { enabled, ...config } = useControls({
-  //   enabled: true,
-  //   size: { value: 25, min: 0, max: 100 },
-  //   focus: { value: 0, min: 0, max: 2 },
-  //   samples: { value: 10, min: 1, max: 20, step: 1 },
-  // });
+
   return (
     <>
-      {/* {enabled && <SoftShadows {...config} />} */}
       <Camera orthographicCameraRef={orthographicCameraRef} />
       <Environment pointLight={pointLight} />
-      {/* <Stage shadows='accumulative'> */}
       <Floor
         circleFirstRef={circleFirstRef}
         circleSecondRef={circleSecondRef}
         circleThirdRef={circleThirdRef}
       />
-      {/* </Stage> */}
       <Room roomRef={roomRef} roomScene={roomScene} screen={screen} />
       <Preloader
         roomRef={roomRef}
